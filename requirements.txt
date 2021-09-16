@@ -1,0 +1,5 @@
+https://github.com/cursosproandroid/pyrogram/archive/beta.zip
+tgcrypto
+umongo==2.3.0
+motor==2.3.0
+dnspython
