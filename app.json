@@ -1,0 +1,85 @@
+{
+    "name": "Media Search bot",
+    "description": "Cuando vaya a enviar un archivo en el canal/grupo de telegram, este bot lo guardará en la base de datos, por lo que puede buscarlo fácilmente en el modo en línea (inline mode)",
+    "keywords": [
+      "telegram",
+      "best",
+      "skueletor",
+      "proandroid",
+      "pyrogram",
+      "media",
+      "search",
+      "channel",
+      "index",
+      "inline"
+    ],
+    "website": "https://github.com/cursosproandroid/Media-Search-bot",
+    "repository": "https://github.com/cursosproandroid/Media-Search-bot",
+    "env": {
+        "BOT_TOKEN": {
+            "description": "El token de tu bot obtenido con @BotFather",
+            "value": ""
+        },
+        "API_ID": {
+            "description": "Obtén este valor desde https://my.telegram.org",
+            "value": ""
+        },
+        "API_HASH": {
+            "description": "Obtén este valor desde https://my.telegram.org",
+            "value": ""
+        },
+        "CHANNELS": {
+            "description": "Nombre de usuario o ID del canal o grupo. Separe varios ID por espacio. Obtén este valor desde @googleimgbot",
+            "value": ""
+        },
+        "ADMINS": {
+            "description": "ID del administrador del bot. Separe varios administradores por espacio.",
+            "value": ""
+        },
+        "AUTH_USERS": {
+            "description": "ID de los usuarios para dar acceso a la búsqueda en línea. Separe varios usuarios por espacio. \nDéjelo vacío si no desea restringir el uso del bot.",
+            "value": "",
+            "required": false
+        },
+        "USE_CAPTION_FILTER": {
+            "description": "Si el bot debe usar subtítulos para mejorar los resultados de búsqueda. (True o False)",
+            "value": "False",
+            "required": false
+        },
+        "DATABASE_URI": {
+            "description": "URI de mongoDB. Obtén este valor desde https://www.mongodb.com.",
+            "value": ""
+        },
+        "DATABASE_NAME": {
+            "description": "Nombre de la base de datos en mongoDB.",
+            "value": ""
+        },
+        "COLLECTION_NAME": {
+            "description": "Nombre de las colecciones. Por defecto es Telegram_files. Si está utilizando la misma base de datos, utilice un nombre de colección diferente para cada bot",
+            "value": "Telegram_files",
+            "required": false
+        },
+        "MAX_RESULTS": {
+            "description": "Límite máximo de resultados de búsqueda en línea",
+            "value": "10",
+            "required": false
+        },
+        "CACHE_TIME": {
+            "description": "La cantidad máxima de tiempo en segundos que el resultado de la consulta en línea puede almacenarse en caché en el servidor.",
+            "value": "300",
+            "required": false
+        }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
