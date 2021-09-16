@@ -33,7 +33,7 @@
             "value": ""
         },
         "ADMINS": {
-            "description": "ID del administrador del bot. Separe varios administradores por espacio.",
+            "description": "ID del administrador del bot. Separe varios administradores por espacio. Obtén este valor desde @googleimgbot",
             "value": ""
         },
         "AUTH_USERS": {
