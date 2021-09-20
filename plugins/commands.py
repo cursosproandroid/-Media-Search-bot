@@ -12,11 +12,7 @@ logger = logging.getLogger(__name__)
 @Client.on_message(filters.command('start'))
 async def start(bot, message):
     """Toca algún botón para iniciar :D"""
-    buttons = [[
-        InlineKeyboardButton('🔎 Buscar aquí', switch_inline_query_current_chat=''),
-        InlineKeyboardButton('Buscar en otro chat 🔍', switch_inline_query=''),
-    ]]
-                [[
+    buttons =   [[
                   InlineKeyboardButton('🔎 Buscar aquí', switch_inline_query_current_chat=''),
         InlineKeyboardButton('Buscar en otro chat 🔍', switch_inline_query='')
                 ],
